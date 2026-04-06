@@ -1,19 +1,26 @@
 Mini-Project 1: Build Your Own Card Game (Java)
 Student Requirements Outline
 
-Student Name:
-Date:
+Student Name: Sam Edmonds
+Date: 4/5/26
 
 --------------------------------------------------
 1) GAME CONCEPT
 --------------------------------------------------
 Game Title:
+Scoundrel
+
 Brief Description (2-4 sentences):
+Scoundrel is a solo dungeon-crawler card game where you navigate through a
+"dungeon" of 4-card rooms. The goal is to clear all cards by fighting monster cards,
+equipping weapons, and using health potions, without your health,
+which starts at 20 reaching zero.
 
 Primary Objective of the Game:
+Survive the deck
 
 Target Player Experience (fun, challenge, strategy, etc.):
-
+Strategy, challenge, fun
 --------------------------------------------------
 2) PLOT TWIST (REQUIRED)
 --------------------------------------------------
