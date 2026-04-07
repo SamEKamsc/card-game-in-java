@@ -26,6 +26,7 @@ Strategy, challenge, fun
 --------------------------------------------------
 Describe your creative plot twist (unexpected rule, event, or mechanic):
 
+
 When does this plot twist happen in gameplay?
 
 How does it change strategy or outcomes?
@@ -36,10 +37,18 @@ How does it change strategy or outcomes?
 List where you use each concept in your program:
 
 - Variables / Data Types:
+    -Life / Int
+    -Name / String
+    -Card suit / String
+    -Card Value / Int
+
 - Control Structures (if/else, switch):
+    -basic menu using switch case
 - Loops (for, while):
+    -while alive
 - Methods (with purpose):
 - Additional Unit 1-4 concept(s):
+    -
 
 --------------------------------------------------
 4) MATH LIBRARY USAGE (KEY REQUIREMENT)
