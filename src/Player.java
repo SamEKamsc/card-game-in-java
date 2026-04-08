@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.lang.Math;
 public class Player {
     int health = 20;
     ArrayList<Card> weapon_stack = new ArrayList<>();
@@ -9,6 +9,7 @@ public class Player {
         this.name = name;
     }
 
+    // Manages taking potion cards that heal the player
     public void take_pot(int value) {
         if (health + value < 20) {
             health += value;
@@ -20,14 +21,53 @@ public class Player {
         }
     }
 
+    // Manage taking weapons that are used to fight monsters
     public void take_weapon(Card weapon) {
+        System.out.println("You took the weapon: " + weapon.get());
         weapon_stack.clear();
         weapon_stack.add(weapon);
     }
-    
-    public void main(String[] args) {
-        if (weapon_stack.get(weapon_stack.size()-1).suit.equals("Spades")) {
 
+    // returns a bool signifying if it can be fought with the current weapon
+    public boolean can_fight(Card monster) {
+        return weapon_stack.size() < 2 || weapon_stack.getLast().value > monster.value;
+    }
+
+    // Fights the monster, returns false if the player dies
+    public boolean fight(Card monster) {
+        if (weapon_stack.isEmpty() || !can_fight(monster)) {
+            System.out.println("You fought the " + monster.get());
+            health -= monster.value;
+
+        }
+        else {
+            int life_lost = Math.max(monster.value - weapon_stack.getFirst().value, 0);
+            health -= life_lost;
+            weapon_stack.add(monster);
+        }
+        if (health <= 0) {
+            return false;
+        }
+        System.out.println("You lost " + monster.value + " HP and now have " + health + "HP");
+        return true;
+    }
+
+    // Simply prints weapon stack
+    public void print_weapon_stack() {
+        System.out.println("Your current weapon is " + weapon_stack.getFirst());
+        System.out.print("You have fought the: ");
+        for (Card card : weapon_stack) {
+            if (card != weapon_stack.getFirst()) {
+                if (card == weapon_stack.getLast()) {
+                    if (weapon_stack.size() >= 3) {
+                        System.out.print("and " + card.value);
+                    } else {
+                        System.out.print(card.value);
+                    }
+                } else {
+                    System.out.print(card.value + ", ");
+                }
+            }
         }
     }
 }
