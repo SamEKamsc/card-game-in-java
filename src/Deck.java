@@ -10,12 +10,14 @@ public class Deck {
             for (int i = 2; i <= 14; i++) {
                 deck.add(new Card(i, suit));
             }
+            deck.add(new Card(15, suit));
         }
         String[] red_suits = {"Diamonds", "Hearts"};
         for (String suit : red_suits) {
             for (int i = 2; i <= 10; i++) {
                 deck.add(new Card(i, suit));
             }
+            deck.add(new Card(15, suit));
         }
     }
 
@@ -37,5 +39,9 @@ public class Deck {
 
     public Card draw() {
         return deck.removeFirst();
+    }
+
+    public void insert(Card card) {
+        deck.add(card);
     }
 }

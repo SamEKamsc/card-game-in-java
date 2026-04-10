@@ -25,12 +25,12 @@ Strategy, challenge, fun
 2) PLOT TWIST (REQUIRED)
 --------------------------------------------------
 Describe your creative plot twist (unexpected rule, event, or mechanic):
-
+I added a new mechanic called the bomb, it is the 14th card of each suit
 
 When does this plot twist happen in gameplay?
-
+the four new cards are randomly drawn
 How does it change strategy or outcomes?
-
+it blows up all the enemies
 --------------------------------------------------
 3) UNITS 1-4 CONCEPTS (REQUIRED)
 --------------------------------------------------
@@ -87,9 +87,9 @@ by dying or surviving
 What inputs does the player provide?
 name and choices
 What outputs/feedback does the game display?
-cards, what happens
+cards, what happens, choices
 How do you handle invalid input?
-i use try except to make sure numnbers are entered and that they are in range
+i use try except to make sure numbers are entered and that they are in range
 --------------------------------------------------
 7) CODE STRUCTURE AND DESIGN
 --------------------------------------------------

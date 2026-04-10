@@ -117,7 +117,11 @@ public class Main {
             Card card = flipped.get(choice-1);
             flipped.remove(choice-1);
             //do the effect
-            if (card.suit.equals("Spades") || card.suit.equals("Clubs")) {
+            if (card.value == 15) {
+                System.out.println("You set off the Bomb.");
+                flipped.clear();
+            }
+            else if (card.suit.equals("Spades") || card.suit.equals("Clubs")) {
                 if (!player.fight(card)) {
                     System.out.println("You Died. There were " + deck.deck.size() + " cards left");
                     break;
