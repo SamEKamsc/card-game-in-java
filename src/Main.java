@@ -52,12 +52,13 @@ public class Main {
     public static void rules() {
         System.out.println("---Rules---");
         System.out.println("Each turn there are four cards revealed");
-        System.out.println("You must perform an action on 3 of them");
+        System.out.println("You must choose one card and perform an action on it based on the suit.");
         System.out.println("The different suits mean different things:");
         System.out.println(" -Hearts: Heal you the card value");
-        System.out.println(" -Diamonds: Is stored as a weapon thats card value is its value and replaces/clears any other weapon");
-        System.out.println(" -Spades / Clubs: these are monsters and they deal damage to you. You subtract the weapons value from the monsters.");
-        System.out.println(" Note: after fighting a monster with a weapon, you put the monster that weapon (or on the monster on the weapon if you fight multiple) and can only fight monsters with value less than the top monsters.");
+        System.out.println(" -Diamonds: Is stored as a weapon to reduce monster damage equal to its card value");
+        System.out.println(" -Spades / Clubs: these are monsters and they deal damage to you equal to their value.");
+        System.out.println(" Note: after fighting a monster with a weapon, can only, in the future, fight monsters with value less than the most recently fought monster.");
+        System.out.println(" Plot Twist: There is one bomb for each suit. The bomb clears all revealed cards.");
     }
     
     public static void play() {

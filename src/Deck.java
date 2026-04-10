@@ -41,7 +41,4 @@ public class Deck {
         return deck.removeFirst();
     }
 
-    public void insert(Card card) {
-        deck.add(card);
-    }
 }
