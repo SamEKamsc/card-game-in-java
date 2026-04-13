@@ -124,7 +124,7 @@ public class Main {
             }
             else if (card.suit.equals("Spades") || card.suit.equals("Clubs")) {
                 if (!player.fight(card)) {
-                    System.out.println("You Died. There were " + deck.deck.size() + " cards left");
+                    System.out.println("You Died. There were " + deck.deck.size() + flipped + " cards left");
                     break;
                 }
             }
